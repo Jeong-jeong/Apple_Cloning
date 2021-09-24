@@ -1,0 +1,21 @@
+@mixin set-img-size($w: false, $h: false, $x, $y, $url: false) {
+  $main__imgs--url: "/assets/imgs/main__imgs/#{$url}";
+  @if ($w != false) {
+    width: $w;
+  } @else {
+    width: $md--breakpoint - 1;
+  }
+  @if ($h != false) {
+    height: $h;
+  } @else {
+    height: $article__img--h;
+  }
+
+  @if ($url != false) {
+    background: url($main__imgs--url);
+  }
+
+  background-size: $x $y;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

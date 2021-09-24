@@ -1,0 +1,111 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header__height;
+  z-index: $header--level;
+  background-color: $header--bg;
+  backdrop-filter: blur(1.5em);
+
+  &__list {
+    position: relative;
+    @include flexbox($jc: between);
+    margin: 0 auto;
+    max-width: $header__max-width;
+    height: 100%;
+
+    &__item {
+      @include font($sz: 13px, $fw: 300, $lh: 3, $ls: -0.01em);
+
+      a,
+      button {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 0 $global--pd;
+        color: $white--txt;
+        opacity: $header__txt__opacity;
+      }
+
+      &[class*="ico"] {
+        height: 100%;
+      }
+
+      &.ico {
+        &__menu {
+          position: relative;
+
+          span {
+            @include pos-center;
+            width: 17px;
+            height: 1px;
+            background-color: $white--txt;
+            transition: transform 0.3s;
+
+            &[class$="top"] {
+              top: $global--pd;
+            }
+            &[class$="bottom"] {
+              top: $global--pd + $header__icon__pd;
+            }
+          }
+        }
+        &__logo {
+          a {
+            $logo__url: "/assets/imgs/icons/global__logo.svg";
+            background: url($logo__url);
+            @include set-img-size(
+              $w: 16px,
+              $h: 100%,
+              $x: 16px,
+              $y: $header__height
+            );
+            @include pos-center-x;
+          }
+        }
+
+        &__search {
+          a {
+            $search__url: "/assets/imgs/icons/ico__search.svg";
+            background: url($search__url);
+            @include set-img-size(
+              $w: 18px,
+              $h: 100%,
+              $x: 18px,
+              $y: $header__height--md * 2
+            );
+            background-position-y: top;
+          }
+        }
+
+        &__cart {
+          a {
+            $cart__url: "/assets/imgs/icons/ico__cart.svg";
+            background: url($cart__url);
+            @include set-img-size(
+              $w: 18px,
+              $h: 100%,
+              $x: 18px,
+              $y: $header__height
+            );
+          }
+        }
+      }
+    }
+  }
+
+  // @include responsive("md") {
+  //   & {
+  //     height: $header--height--md;
+
+  //     &__list__item {
+  //       &.ico__logo {
+  //         a {
+  //           position: relative;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}

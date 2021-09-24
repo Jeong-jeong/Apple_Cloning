@@ -1,0 +1,117 @@
+.main {
+  @include responsive(md) {
+    %base__article--md {
+      .info {
+        &__title {
+          font-size: 46px;
+        }
+
+        &__sub-title {
+          font-size: 21px;
+          margin-top: $article__sub--mg;
+        }
+      }
+
+      .more--wrapper {
+        font-size: 17px;
+      }
+    }
+
+    .article-group {
+      article:not([class*="grid"]) {
+        @extend %base__article--md;
+        height: $article__img--h--md;
+      }
+      .grid-area {
+        display: grid;
+        @include get-grid(md);
+      }
+
+      .iphone13-pro {
+        padding-top: $article--pd-top--md;
+
+        .article__img {
+          &--md {
+            z-index: $article--level;
+            @include set-img-size(
+              $w: $lg--breakpoint-1,
+              $h: $article__img--h--md,
+              $x: $lg--breakpoint-1,
+              $y: $article__img--h--md,
+              $url: "iphone13-pro--md.jpeg"
+            );
+            @include pos-center-x;
+            top: 0;
+          }
+        }
+      }
+
+      .iphone13 {
+        padding-top: $article--pd-top--md;
+
+        .article__img {
+          &--md {
+            z-index: $article--level;
+            @include set-img-size(
+              $w: $lg--breakpoint-1,
+              $h: $article__img--h--md,
+              $x: $lg--breakpoint - 1,
+              $y: $article__img--h--md,
+              $url: "iphone13--md.jpeg"
+            );
+            @include pos-center-x;
+            top: 0;
+          }
+        }
+
+        .info {
+          position: static;
+          transform: none;
+        }
+      }
+
+      .watch {
+        .article__img {
+          &--md {
+            z-index: $article--level;
+            @include set-img-size(
+              $w: $lg--breakpoint-1,
+              $h: $article__img--h--md,
+              $x: $lg--breakpoint-1,
+              $y: $article__img--h--md,
+              $url: "watch--md.jpeg"
+            );
+            @include pos-center-x;
+            top: 0;
+          }
+        }
+
+        .info {
+          $watch__logo--w: 174px;
+          $watch__logo--h: 66px;
+
+          padding-top: $article--pd-top--md;
+
+          &__title {
+            @include set-img-size(
+              $w: $watch__logo--w,
+              $h: $watch__logo--h,
+              $x: $watch__logo--w,
+              $y: $watch__logo--h,
+              $url: "series7--md.png"
+            );
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .grid-area {
+        .mac-air {
+          .info {
+            padding-top: $article--pd-top--md;
+          }
+        }
+      }
+    }
+  }
+}

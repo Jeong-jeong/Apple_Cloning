@@ -1,0 +1,15 @@
+.header {
+  @include responsive("md") {
+    & {
+      height: $header--height--md;
+
+      &__list__item {
+        &.ico__logo {
+          a {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}

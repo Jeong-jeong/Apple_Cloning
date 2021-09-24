@@ -1,0 +1,16 @@
+.main {
+  @include responsive("max-lg") {
+    .grid-area {
+      .article__img {
+        &--lg {
+          @include set-img-size(
+            $w: 100% !important,
+            $h: $article__img--h--md,
+            $x: 100%,
+            $y: $article__img--h--md !important
+          );
+        }
+      }
+    }
+  }
+}

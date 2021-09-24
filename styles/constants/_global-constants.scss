@@ -1,0 +1,48 @@
+// BREAKPOINT
+$lg--breakpoint: 1069px;
+$lg--breakpoint-1: 1068px; // FIXME: 변수 내부에서 계산식이 평가가 안됨
+$md--breakpoint: 735px;
+
+// GRID
+$grid__columns--sm: 1;
+$grid__columns--md: 2;
+
+$grid--gutter: 12px;
+
+// GLOBAL
+$global--pd: 20px;
+$global__inner--pd: 10px;
+$inline--gap: 4px;
+
+// HEADER
+$header__max-width: 1000px;
+$header__height: 48px;
+$header__height--md: 44px;
+$header__txt__opacity: 0.8;
+$header__icon__pd: 8px;
+
+// ASIDE
+$aside--pd: 12px;
+
+// MAIN
+$article__pos--top--lg: 30px;
+$article--pd-top: 32px;
+$article--pd-top--md: 53px;
+$article__sub--mg: 6px;
+$article__sub--mg--lg: 18px;
+$article__desc--mg: 8px;
+$article__desc--mg--lg: 8px;
+$article__more--mg: 14px;
+
+$article__img--h: 500px;
+$article__img--h--md: 600px;
+$article__img--h--lg: 720px;
+$article__img--w--lg: 3100px;
+$article__grid-img--w--lg: 1260px;
+
+// FOOTER
+$footer__max-h: 980px;
+$footer--pd: 16px;
+$footer--pd--md: 24px;
+$footer__inner--pd: 5px;
+$footer__columns--md: 5;

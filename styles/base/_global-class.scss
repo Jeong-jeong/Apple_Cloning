@@ -1,0 +1,75 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+}
+
+.highlight {
+  color: $blue;
+}
+
+.bg--black {
+  .info {
+    & *:not([class^="more"]) {
+      color: $white--txt !important;
+    }
+
+    [class^="more"] {
+      color: $blue-light;
+    }
+  }
+}
+
+// sm == mobile screen
+// md == tablet screen
+// lg == desktop screen
+
+.sm--only {
+  @media screen and (min-width: $md--breakpoint) {
+    // md부턴 안보이도록
+    display: none !important;
+  }
+}
+
+.sm--hidden {
+  @media screen and (max-width: $md--breakpoint - 1px) {
+    // sm만 안보이도록
+    display: none !important;
+  }
+}
+
+.md--only {
+  @media screen and (max-width: $md--breakpoint - 1px) {
+    // sm이 안보이도록
+    display: none !important;
+  }
+
+  @media screen and (min-width: $lg--breakpoint) {
+    // lg가 안보이도록
+    display: none !important;
+  }
+}
+
+.md--hidden {
+  @media screen and (min-width: $md--breakpoint) and (max-width: $lg--breakpoint - 1px) {
+    // md만 안보이도록
+    display: none !important;
+  }
+}
+
+.lg--only {
+  @media screen and (max-width: $lg--breakpoint - 1px) {
+    // lg만 보이도록
+    display: none !important;
+  }
+}
+
+.lg--hidden {
+  @media screen and (min-width: $lg--breakpoint) {
+    // lg만 안보이도록
+    display: none !important;
+  }
+}

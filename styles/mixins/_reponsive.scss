@@ -1,0 +1,19 @@
+@mixin responsive($screen) {
+  @if ($screen == "md") {
+    @media screen and (min-width: $md--breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen == "lg") {
+    @media screen and (min-width: $lg--breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen == "max-lg") {
+    @media screen and (min-width: $article__grid-img--w--lg * 2) {
+      @content;
+    }
+  }
+}

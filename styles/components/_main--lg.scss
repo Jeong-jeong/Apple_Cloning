@@ -1,0 +1,226 @@
+.main {
+  @include responsive("lg") {
+    %base__article--lg {
+      .info {
+        &__title {
+          font-size: 54px;
+        }
+
+        &__sub-title {
+          font-size: 26px;
+          margin-top: $article__sub--mg--lg;
+        }
+
+        &__desc {
+          margin-top: $article__sub--mg--lg;
+        }
+      }
+
+      .more--wrapper {
+        font-size: 19px;
+        margin-top: $article__sub--mg--lg;
+      }
+    }
+
+    .article-group {
+      article:not([class*="grid"]) {
+        @extend %base__article--lg;
+        height: $article__img--h--lg;
+      }
+
+      article[class*="grid"] {
+        height: $article__img--h--md;
+
+        .info {
+          &__title {
+            font-size: 40px;
+            letter-spacing: -0.05em;
+          }
+          &__sub-title {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .iphone13-pro {
+        $iphone13-pro--w--lg: $article__img--w--lg + 600px;
+
+        .article__img {
+          &--lg {
+            z-index: $article--level;
+
+            @include set-img-size(
+              $w: $iphone13-pro--w--lg,
+              $h: $article__img--h--lg,
+              $x: $iphone13-pro--w--lg,
+              $y: $article__img--h--lg,
+              $url: "iphone13-pro--lg.jpeg"
+            );
+            @include pos-center-x;
+            top: 0;
+          }
+        }
+      }
+
+      .iphone13 {
+        .article__img {
+          &--lg {
+            z-index: $article--level;
+            @include set-img-size(
+              $w: $article__img--w--lg,
+              $h: $article__img--h--lg,
+              $x: $article__img--w--lg,
+              $y: $article__img--h--lg,
+              $url: "iphone13--lg.jpeg"
+            );
+            @include pos-center-x;
+            top: 0;
+          }
+        }
+      }
+
+      .watch {
+        .article__img {
+          &--lg {
+            z-index: $article--level;
+            @include set-img-size(
+              $w: $article__img--w--lg,
+              $h: $article__img--h--lg + $article__pos--top--lg,
+              $x: $article__img--w--lg,
+              $y: $article__img--h--lg + $article__pos--top--lg,
+              $url: "watch--lg.jpeg"
+            );
+            @include pos-center-x;
+            top: -$article__pos--top--lg;
+          }
+        }
+      }
+
+      .grid-area {
+        .ipad-mini {
+          .article__img {
+            &--lg {
+              z-index: $article--level;
+              @include set-img-size(
+                $w: $article__grid-img--w--lg,
+                $h: $article__img--h--md,
+                $x: $article__grid-img--w--lg,
+                $y: $article__img--h--md,
+                $url: "ipad-mini--lg.jpeg"
+              );
+              @include pos-center-x;
+              top: 0;
+            }
+          }
+
+          .info {
+            $ipad-mini__logo--w: 153px;
+            $ipad-mini__logo--h: 31px;
+
+            padding-top: $article--pd-top--md;
+
+            &__title {
+              @include set-img-size(
+                $w: $ipad-mini__logo--w,
+                $h: $ipad-mini__logo--h,
+                $x: $ipad-mini__logo--w,
+                $y: $ipad-mini__logo--h,
+                $url: "ipad-mini__title--lg.png"
+              );
+            }
+          }
+        }
+
+        .ipad {
+          .article__img {
+            &--lg {
+              z-index: $article--level;
+              @include set-img-size(
+                $w: $article__grid-img--w--lg,
+                $h: $article__img--h--md,
+                $x: $article__grid-img--w--lg,
+                $y: $article__img--h--md,
+                $url: "ipad--lg.jpeg"
+              );
+              @include pos-center-x;
+              top: 0;
+            }
+          }
+
+          .info {
+            @include pos-center-x;
+            bottom: $global--pd * 2;
+          }
+        }
+
+        .mac-pro {
+          .article__img {
+            &--lg {
+              z-index: $article--level;
+              @include set-img-size(
+                $w: $article__grid-img--w--lg,
+                $h: $article__img--h--md,
+                $x: $article__grid-img--w--lg,
+                $y: $article__img--h--md,
+                $url: "mac-pro--lg.jpeg"
+              );
+              @include pos-center-x;
+              top: 0;
+            }
+          }
+        }
+
+        .mac-air {
+          .article__img {
+            &--lg {
+              z-index: $article--level;
+              @include set-img-size(
+                $w: $article__grid-img--w--lg,
+                $h: $article__img--h--md,
+                $x: $article__grid-img--w--lg,
+                $y: $article__img--h--md,
+                $url: "mac-air--lg.jpeg"
+              );
+              @include pos-center-x;
+              top: 0;
+            }
+          }
+        }
+
+        .air-tag {
+          .article__img {
+            &--lg {
+              z-index: $article--level;
+              @include set-img-size(
+                $w: $article__grid-img--w--lg,
+                $h: $article__img--h--md,
+                $x: $article__grid-img--w--lg,
+                $y: $article__img--h--md,
+                $url: "air-tag--lg.jpeg"
+              );
+              @include pos-center-x;
+              top: 0;
+            }
+          }
+        }
+
+        .iMac {
+          .article__img {
+            &--lg {
+              z-index: $article--level;
+              @include set-img-size(
+                $w: $article__grid-img--w--lg,
+                $h: $article__img--h--md,
+                $x: $article__grid-img--w--lg,
+                $y: $article__img--h--md,
+                $url: "iMac--lg.jpeg"
+              );
+              @include pos-center-x;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

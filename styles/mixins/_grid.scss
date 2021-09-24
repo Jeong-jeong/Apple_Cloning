@@ -1,0 +1,10 @@
+@mixin get-grid($screen) {
+  @if ($screen == "sm") {
+    grid-template-columns: repeat($grid__columns--sm, 1fr);
+  }
+
+  @if ($screen == "md") {
+    grid-template-columns: repeat($grid__columns--md, 1fr);
+  }
+  gap: $grid__gutter;
+}
