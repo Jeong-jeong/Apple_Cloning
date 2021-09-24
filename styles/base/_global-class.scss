@@ -13,11 +13,11 @@
 
 .bg--black {
   .info {
-    & *:not([class^="more"]) {
+    & *:not([class*="more"]) {
       color: $white--txt !important;
     }
 
-    [class^="more"] {
+    [class*="more"] {
       color: $blue-light;
     }
   }

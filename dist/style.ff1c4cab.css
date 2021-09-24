@@ -46,10 +46,10 @@ dd {
   color: #06c;
 }
 
-.bg--black .info *:not([class^=more]) {
+.bg--black .info *:not([class*=more]) {
   color: #f5f5f7 !important;
 }
-.bg--black .info [class^=more] {
+.bg--black .info [class*=more] {
   color: #2997ff;
 }
 
