@@ -819,6 +819,7 @@ body {
 .footer__info .legal a:not(:last-child)::after {
   position: absolute;
   right: 0;
+  top: 0;
   content: "";
   width: 1px;
   height: 100%;
@@ -834,6 +835,7 @@ body {
 .footer__info .corps dd:not(:last-child)::after {
   position: absolute;
   right: 0;
+  top: 0;
   content: "";
   width: 1px;
   height: 100%;
