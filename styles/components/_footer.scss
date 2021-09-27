@@ -47,8 +47,8 @@
         }
         &:not(:last-child)::after {
           position: absolute;
-          top: 0;
           right: 0;
+          top: 0;
           content: "";
           width: 1px;
           height: 100%;
@@ -67,8 +67,8 @@
 
         &:not(:last-child)::after {
           position: absolute;
-          top: 0;
           right: 0;
+          top: 0;
           content: "";
           width: 1px;
           height: 100%;
