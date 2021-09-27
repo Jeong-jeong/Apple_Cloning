@@ -47,6 +47,7 @@
         }
         &:not(:last-child)::after {
           position: absolute;
+          top: 0;
           right: 0;
           content: "";
           width: 1px;
@@ -66,6 +67,7 @@
 
         &:not(:last-child)::after {
           position: absolute;
+          top: 0;
           right: 0;
           content: "";
           width: 1px;
